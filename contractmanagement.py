@@ -19,7 +19,7 @@ from math import ceil
 # Page configuration
 st.set_page_config(
     page_title="Contract Management",
-    page_icon="assets/unnamed.png",
+    page_icon="cms.png",
     layout="wide",
     initial_sidebar_state="collapsed"
 )
@@ -700,8 +700,8 @@ if "work_orders" not in st.session_state:
 if "invoices" not in st.session_state:
     st.session_state["invoices"] = []
 
-uidai_logo_base64 = get_base64_of_bin_file('assets/uidai_english_logo.png')
-aadhaar_logo_base64 = get_base64_of_bin_file('assets/logo.png')
+uidai_logo_base64 = get_base64_of_bin_file('uidai_english_logo.png')
+aadhaar_logo_base64 = get_base64_of_bin_file('uidai-logo.png')
 if uidai_logo_base64 or aadhaar_logo_base64:
     st.markdown(f"""
     <div class="uidai-official-header">
@@ -5974,4 +5974,5 @@ st.markdown(f"""
     <p style="margin: 0; font-size: 0.9rem;">© 2025 Contract Management System</p>
     <p style="margin: 0; font-size: 0.8rem; opacity: 0.8;">Developed for UIDAI</p>
 </div>
+
 """, unsafe_allow_html=True)
